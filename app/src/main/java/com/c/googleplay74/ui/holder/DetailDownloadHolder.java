@@ -16,9 +16,6 @@ import com.c.googleplay74.utils.UIUtils;
 
 /**
  * 详情页-下载模块
- * 
- * @author Kevin
- * @date 2015-11-4
  */
 public class DetailDownloadHolder extends BaseHolder<AppInfo> implements
 		DownloadObserver, OnClickListener {
@@ -49,9 +46,7 @@ public class DetailDownloadHolder extends BaseHolder<AppInfo> implements
 		pbProgress.setProgressTextSize(UIUtils.dip2px(18));// 进度文字大小
 
 		// 宽高填充父窗体
-		FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
-				FrameLayout.LayoutParams.MATCH_PARENT,
-				FrameLayout.LayoutParams.MATCH_PARENT);
+		FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT);
 
 		// 给帧布局添加自定义进度条
 		flProgress.addView(pbProgress, params);

@@ -24,9 +24,7 @@ import com.lidroid.xutils.BitmapUtils;
 
 /**
  * 首页轮播条holder
- * 
- * @author Kevin
- * @date 2015-11-1
+ *
  */
 public class HomeHeaderHolder extends BaseHolder<ArrayList<String>> {
 

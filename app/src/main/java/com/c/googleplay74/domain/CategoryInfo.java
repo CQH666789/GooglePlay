@@ -1,11 +1,6 @@
 package com.c.googleplay74.domain;
 
-/**
- * 分类信息
- * 
- * @author Kevin
- * @date 2015-11-1
- */
+
 public class CategoryInfo {
 
 	public String name1;

@@ -116,8 +116,7 @@ public class FlowLayout extends ViewGroup {
 			}
 		}
 
-		if (mLine != null && mLine.getViewCount() > 0
-				&& !mLines.contains(mLine)) {
+		if (mLine != null && mLine.getViewCount() > 0 && !mLines.contains(mLine)) {
 			// 由于前面采用判断长度是否超过最大宽度来决定是否换行，则最后一行可能因为还没达到最大宽度，所以需要验证后加入集合中
 			mLines.add(mLine);
 		}
@@ -132,8 +131,7 @@ public class FlowLayout extends ViewGroup {
 		totalHeight += getPaddingTop() + getPaddingBottom();// 加上padding
 		// 设置布局的宽高，宽度直接采用父view传递过来的最大宽度，而不用考虑子view是否填满宽度，因为该布局的特性就是填满一行后，再换行
 		// 高度根据设置的模式来决定采用所有子View的高度之和还是采用父view传递过来的高度
-		setMeasuredDimension(totalWidth,
-				resolveSize(totalHeight, heightMeasureSpec));
+		setMeasuredDimension(totalWidth, resolveSize(totalHeight, heightMeasureSpec));
 	}
 
 	@Override

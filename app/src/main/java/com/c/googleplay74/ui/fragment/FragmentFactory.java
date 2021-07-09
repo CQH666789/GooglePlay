@@ -4,9 +4,7 @@ import java.util.HashMap;
 
 /**
  * 生产fragment工厂
- * 
- * @author Kevin
- * @date 2015-10-27
+ *
  */
 public class FragmentFactory {
 

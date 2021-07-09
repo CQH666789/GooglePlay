@@ -10,9 +10,6 @@ import com.c.googleplay74.domain.AppInfo;
 
 /**
  * 应用网络请求
- * 
- * @author Kevin
- * @date 2015-10-30
  */
 public class AppProtocol extends BaseProtocol<ArrayList<AppInfo>> {
 

@@ -19,9 +19,6 @@ import com.c.googleplay74.utils.UIUtils;
 
 /**
  * 推荐
- * 
- * @author Kevin
- * @date 2015-10-27
  */
 public class RecommendFragment extends BaseFragment {
 

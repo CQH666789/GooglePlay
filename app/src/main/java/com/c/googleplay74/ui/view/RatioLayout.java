@@ -9,9 +9,7 @@ import android.widget.FrameLayout;
 
 /**
  * 自定义控件, 按照比例来决定布局高度
- * 
- * @author Kevin
- * @date 2015-10-30
+ *
  */
 public class RatioLayout extends FrameLayout {
 

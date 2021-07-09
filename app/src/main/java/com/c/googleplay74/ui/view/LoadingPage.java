@@ -1,6 +1,7 @@
 package com.c.googleplay74.ui.view;
 
 import com.c.googleplay74.R;
+import com.c.googleplay74.manager.ThreadManager;
 import com.c.googleplay74.utils.UIUtils;
 
 import android.content.Context;
@@ -13,9 +14,7 @@ import android.widget.FrameLayout;
  * 根据当前状态来显示不同页面的自定义控件
  * 
  * - 未加载 - 加载中 - 加载失败 - 数据为空 - 加载成功
- * 
- * @author Kevin
- * @date 2015-10-27
+ *
  */
 public abstract class LoadingPage extends FrameLayout {
 
@@ -120,7 +119,7 @@ public abstract class LoadingPage extends FrameLayout {
 		if (mCurrentState != STATE_LOAD_LOADING) {// 如果当前没有加载, 就开始加载数据
 
 			mCurrentState = STATE_LOAD_LOADING;
-
+/*
 			new Thread() {
 				@Override
 				public void run() {
@@ -140,6 +139,27 @@ public abstract class LoadingPage extends FrameLayout {
 					});
 				}
 			}.start();
+*/
+			ThreadManager.getThreadPool().execute(new Runnable() {
+
+				@Override
+				public void run() {
+					final ResultState resultState = onLoad();
+
+					// 运行在主线程
+					UIUtils.runOnUIThread(new Runnable() {
+
+						@Override
+						public void run() {
+							if (resultState != null) {
+								mCurrentState = resultState.getState();// 网络加载结束后,更新网络状态
+								// 根据最新的状态来刷新页面
+								showRightPage();
+							}
+						}
+					});
+				}
+			});
 		}
 	}
 

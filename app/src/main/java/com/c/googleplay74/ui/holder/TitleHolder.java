@@ -9,9 +9,6 @@ import com.c.googleplay74.utils.UIUtils;
 
 /**
  * 分类模块标题holder
- * 
- * @author Kevin
- * @date 2015-11-1
  */
 public class TitleHolder extends BaseHolder<CategoryInfo> {
 

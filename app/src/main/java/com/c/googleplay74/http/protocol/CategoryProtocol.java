@@ -10,9 +10,6 @@ import com.c.googleplay74.domain.CategoryInfo;
 
 /**
  * 分类模块请求网络
- * 
- * @author Kevin
- * @date 2015-11-1
  */
 public class CategoryProtocol extends BaseProtocol<ArrayList<CategoryInfo>> {
 

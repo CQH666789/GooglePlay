@@ -16,9 +16,6 @@ import com.lidroid.xutils.BitmapUtils;
 
 /**
  * 首页详情页-截图
- * 
- * @author Kevin
- * @date 2015-11-3
  */
 public class DetailPicsHolder extends BaseHolder<AppInfo> {
 

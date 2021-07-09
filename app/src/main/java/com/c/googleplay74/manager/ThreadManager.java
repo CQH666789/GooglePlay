@@ -8,9 +8,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 线程管理器
- * 
- * @author Kevin
- * @date 2015-11-4
  */
 public class ThreadManager {
 

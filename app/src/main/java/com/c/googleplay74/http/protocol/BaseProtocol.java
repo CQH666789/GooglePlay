@@ -14,9 +14,6 @@ import com.c.googleplay74.utils.UIUtils;
 
 /**
  * 访问网络的基类
- * 
- * @author Kevin
- * @date 2015-10-28
  */
 public abstract class BaseProtocol<T> {
 

@@ -21,9 +21,6 @@ import com.c.googleplay74.utils.UIUtils;
 
 /**
  * 排行
- * 
- * @author Kevin
- * @date 2015-10-27
  */
 public class HotFragment extends BaseFragment {
 

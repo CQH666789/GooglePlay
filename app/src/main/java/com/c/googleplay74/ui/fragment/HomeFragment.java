@@ -21,9 +21,6 @@ import com.c.googleplay74.utils.UIUtils;
 
 /**
  * 首页
- * 
- * @author Kevin
- * @date 2015-10-27
  */
 public class HomeFragment extends BaseFragment {
 

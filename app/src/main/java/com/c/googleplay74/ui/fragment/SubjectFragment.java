@@ -15,9 +15,6 @@ import android.view.View;
 
 /**
  * 专题
- * 
- * @author Kevin
- * @date 2015-10-27
  */
 public class SubjectFragment extends BaseFragment {
 

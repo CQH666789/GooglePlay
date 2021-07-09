@@ -15,10 +15,8 @@ import com.c.googleplay74.utils.UIUtils;
 import android.view.View;
 
 /**
- * 首页
- * 
- * @author Kevin
- * @date 2015-10-27
+ * 分类
+ *
  */
 public class CategoryFragment extends BaseFragment {
 

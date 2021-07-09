@@ -35,8 +35,6 @@ import com.c.googleplay74.utils.UIUtils;
  * 2. 创建状态选择器bg_tab_text和tab_text_color
  * 3. 自动导包
  * 4. 给UIUtils增加方法:getColorStateList
- * @author Kevin
- * @date 2015-10-27
  */
 public class PagerTab extends ViewGroup {
 

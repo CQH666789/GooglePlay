@@ -23,9 +23,6 @@ import com.c.googleplay74.utils.UIUtils;
 
 /**
  * 详情页-应用描述
- * 
- * @author Kevin
- * @date 2015-11-3
  */
 public class DetailDesHolder extends BaseHolder<AppInfo> {
 
@@ -125,7 +122,7 @@ public class DetailDesHolder extends BaseHolder<AppInfo> {
 					// ScrollView要滑动到最底部
 					final ScrollView scrollView = getScrollView();
 
-					// 为了运行更加安全和稳定, 可以讲滑动到底部方法放在消息队列中执行
+					// 为了运行更加安全和稳定, 可以将滑动到底部方法放在消息队列中执行
 					scrollView.post(new Runnable() {
 
 						@Override
@@ -163,7 +160,7 @@ public class DetailDesHolder extends BaseHolder<AppInfo> {
 		TextView view = new TextView(UIUtils.getContext());
 		view.setText(getData().des);// 设置文字
 		view.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);// 文字大小一致
-		view.setMaxLines(7);// 最大行数为7行
+		view.setMaxLines(18);// 最大行数为7行
 
 		int widthMeasureSpec = MeasureSpec.makeMeasureSpec(width,
 				MeasureSpec.EXACTLY);// 宽不变, 确定值, match_parent

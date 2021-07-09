@@ -25,9 +25,6 @@ import com.c.googleplay74.utils.UIUtils;
 
 /**
  * 首页应用详情页
- * 
- * @author Kevin
- * @date 2015-11-1
  */
 public class HomeDetailActivity extends BaseActivity {
 
@@ -89,30 +86,26 @@ public class HomeDetailActivity extends BaseActivity {
 		View view = UIUtils.inflate(R.layout.page_home_detail);
 
 		// 初始化应用信息模块
-		FrameLayout flDetailAppInfo = (FrameLayout) view
-				.findViewById(R.id.fl_detail_appinfo);
+		FrameLayout flDetailAppInfo = (FrameLayout) view.findViewById(R.id.fl_detail_appinfo);
 		// 动态给帧布局填充页面
 		DetailAppInfoHolder appInfoHolder = new DetailAppInfoHolder();
 		flDetailAppInfo.addView(appInfoHolder.getRootView());
 		appInfoHolder.setData(data);
 
 		// 初始化安全描述模块
-		FrameLayout flDetailSafe = (FrameLayout) view
-				.findViewById(R.id.fl_detail_safe);
+		FrameLayout flDetailSafe = (FrameLayout) view.findViewById(R.id.fl_detail_safe);
 		DetailSafeHolder safeHolder = new DetailSafeHolder();
 		flDetailSafe.addView(safeHolder.getRootView());
 		safeHolder.setData(data);
 
 		// 初始化截图模块
-		HorizontalScrollView hsvPic = (HorizontalScrollView) view
-				.findViewById(R.id.hsv_detail_pics);
+		HorizontalScrollView hsvPic = (HorizontalScrollView) view.findViewById(R.id.hsv_detail_pics);
 		DetailPicsHolder picsHolder = new DetailPicsHolder();
 		hsvPic.addView(picsHolder.getRootView());
 		picsHolder.setData(data);
 
 		// 初始化描述模块
-		FrameLayout flDetailDes = (FrameLayout) view
-				.findViewById(R.id.fl_detail_des);
+		FrameLayout flDetailDes = (FrameLayout) view.findViewById(R.id.fl_detail_des);
 		DetailDesHolder desHolder = new DetailDesHolder();
 		flDetailDes.addView(desHolder.getRootView());
 		desHolder.setData(data);
@@ -120,8 +113,7 @@ public class HomeDetailActivity extends BaseActivity {
 		// getIntent().getSerializableExtra("list");
 
 		// 初始化下载模块
-		FrameLayout flDetailDownload = (FrameLayout) view
-				.findViewById(R.id.fl_detail_download);
+		FrameLayout flDetailDownload = (FrameLayout) view.findViewById(R.id.fl_detail_download);
 		DetailDownloadHolder downloadHolder = new DetailDownloadHolder();
 		flDetailDownload.addView(downloadHolder.getRootView());
 		downloadHolder.setData(data);

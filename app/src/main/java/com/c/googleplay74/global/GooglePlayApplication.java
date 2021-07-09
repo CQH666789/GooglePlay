@@ -6,9 +6,6 @@ import android.os.Handler;
 
 /**
  * 自定义application, 进行全局初始化
- * 
- * @author Kevin
- * @date 2015-10-27
  */
 public class GooglePlayApplication extends Application {
 

@@ -7,17 +7,7 @@ import com.c.googleplay74.utils.UIUtils;
 
 import android.os.Environment;
 
-/**
- * 下载对象
- * 
- * 注意: 一定要有读写sdcard的权限!!!!
- * 
- *  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
- * 
- * @author Kevin
- * @date 2015-11-4
- */
+
 public class DownloadInfo {
 
 	public String id;
@@ -47,11 +37,12 @@ public class DownloadInfo {
 	public static DownloadInfo copy(AppInfo info) {
 		DownloadInfo downloadInfo = new DownloadInfo();
 
+
+		downloadInfo.packageName = info.packageName;
+		downloadInfo.size = info.size;
 		downloadInfo.id = info.id;
 		downloadInfo.name = info.name;
 		downloadInfo.downloadUrl = info.downloadUrl;
-		downloadInfo.packageName = info.packageName;
-		downloadInfo.size = info.size;
 
 		downloadInfo.currentPos = 0;
 		downloadInfo.currentState = DownloadManager.STATE_UNDO;// 默认状态是未下载

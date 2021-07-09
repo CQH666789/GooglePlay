@@ -13,9 +13,6 @@ import com.lidroid.xutils.BitmapUtils;
 
 /**
  * 专题holder
- * 
- * @author Kevin
- * @date 2015-10-30
  */
 public class SubjectHolder extends BaseHolder<SubjectInfo> {
 

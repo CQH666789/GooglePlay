@@ -19,9 +19,6 @@ import android.view.MenuItem;
 /**
  * 当项目和appcompat关联在一起时, 就必须在清单文件中设置Theme.AppCompat的主题, 否则崩溃
  * android:theme="@style/Theme.AppCompat.Light"
- * 
- * @author Kevin
- * @date 2015-10-27
  */
 public class MainActivity extends BaseActivity {
 

@@ -9,6 +9,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import android.content.Intent;
 import android.net.Uri;
 
+import androidx.core.content.FileProvider;
+
 import com.c.googleplay74.domain.AppInfo;
 import com.c.googleplay74.domain.DownloadInfo;
 import com.c.googleplay74.http.HttpHelper;
@@ -22,9 +24,6 @@ import com.c.googleplay74.utils.UIUtils;
  * - 未下载 - 等待下载 - 正在下载 - 暂停下载 - 下载失败 - 下载成功
  * 
  * DownloadManager: 被观察者, 有责任通知所有观察者状态和进度发生变化
- * 
- * @author Kevin
- * @date 2015-11-4
  */
 public class DownloadManager {
 
@@ -158,8 +157,7 @@ public class DownloadManager {
 					byte[] buffer = new byte[1024];
 
 					// 只有状态是正在下载, 才继续轮询. 解决下载过程中中途暂停的问题
-					while ((len = in.read(buffer)) != -1
-							&& downloadInfo.currentState == STATE_DOWNLOADING) {
+					while ((len = in.read(buffer)) != -1 && downloadInfo.currentState == STATE_DOWNLOADING) {
 						out.write(buffer, 0, len);
 						out.flush();// 把剩余数据刷入本地
 
@@ -211,8 +209,7 @@ public class DownloadManager {
 
 		if (downloadInfo != null) {
 			// 只有在正在下载和等待下载时才需要暂停
-			if (downloadInfo.currentState == STATE_DOWNLOADING
-					|| downloadInfo.currentState == STATE_WAITING) {
+			if (downloadInfo.currentState == STATE_DOWNLOADING || downloadInfo.currentState == STATE_WAITING) {
 
 				DownloadTask task = mDownloadTaskMap.get(downloadInfo.id);
 
@@ -234,10 +231,21 @@ public class DownloadManager {
 		DownloadInfo downloadInfo = mDownloadInfoMap.get(info.id);
 		if (downloadInfo != null) {
 			// 跳到系统的安装页面进行安装
+			/*
 			Intent intent = new Intent(Intent.ACTION_VIEW);
 			intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 			intent.setDataAndType(Uri.parse("file://" + downloadInfo.path),
 					"application/vnd.android.package-archive");
+			UIUtils.getContext().startActivity(intent);
+*/
+
+			//File apk = new File();
+			Intent intent = new Intent(Intent.ACTION_VIEW);
+			intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+			//Uri uri = FileProvider.getUriForFile(this, "com.apk.demo.fileprovider", apk);
+			intent.setDataAndType(Uri.parse("file://" + downloadInfo.path), "application/vnd.android.package-archive");
+
 			UIUtils.getContext().startActivity(intent);
 		}
 	}

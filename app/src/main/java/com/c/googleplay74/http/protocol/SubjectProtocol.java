@@ -10,9 +10,6 @@ import com.c.googleplay74.domain.SubjectInfo;
 
 /**
  * 专题网络请求
- * 
- * @author Kevin
- * @date 2015-10-30
  */
 public class SubjectProtocol extends BaseProtocol<ArrayList<SubjectInfo>> {
 
