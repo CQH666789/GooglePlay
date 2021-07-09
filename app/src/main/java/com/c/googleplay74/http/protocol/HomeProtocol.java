@@ -28,7 +28,6 @@ public class HomeProtocol extends BaseProtocol<ArrayList<AppInfo>> {
 	@Override
 	public ArrayList<AppInfo> parseData(String result) {
 		// Gson, JsonObject
-		// 使用JsonObject解析方式: 如果遇到{},就是JsonObject;如果遇到[], 就是JsonArray
 		try {
 			JSONObject jo = new JSONObject(result);
 
